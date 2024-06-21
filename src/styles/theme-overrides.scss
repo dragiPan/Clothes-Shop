@@ -1,0 +1,7 @@
+.p-rating-cancel-item {
+  display: none;
+} //hides the cancel icon for our rating template
+
+input.ng-invalid {
+  border: 1px solid red;
+} //makes the invalid entered fields red

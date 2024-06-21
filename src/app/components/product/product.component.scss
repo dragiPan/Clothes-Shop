@@ -1,0 +1,26 @@
+.wrapper {
+  width: 250px;
+
+  img {
+    aspect-ratio: 1; //maakes sure the image is square
+    object-fit: contain;
+    width: 100%; //250 px at all time no matter the window size
+    border-radius: 15px;
+    background-color: grey; //in case the image is not displayed we want to have a default background color
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .price-label {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .price {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

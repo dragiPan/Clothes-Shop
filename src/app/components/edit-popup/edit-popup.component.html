@@ -1,0 +1,49 @@
+<p-dialog
+  [header]="header"
+  [(visible)]="display"
+  [modal]="true"
+  [closable]="false"
+>
+  <!--Name-->
+  <div class="column gap-1 form-wrapper" [formGroup]="productForm">
+    <!--formGroup making our div into a form-->
+    <div class="row gap-05">
+      <span class="price-label">Name:</span>
+      <input type="text" formControlName="name" />
+    </div>
+
+    <!--Price-->
+    <div class="row gap-05">
+      <span class="price-label">Price:</span>
+      <input type="text" formControlName="price" />
+    </div>
+
+    <!--Image-->
+    <div class="row gap-05">
+      <span class="price-label">Image:</span>
+      <input type="text" formControlName="image" />
+    </div>
+
+    <!--Rating-->
+    <p-rating formControlName="rating" iconCancelClass="hidden"></p-rating
+    ><!--removing readonly property since it's false by default-->
+  </div>
+  <p-footer>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-check"
+      (click)="onConfirm()"
+      label="Confirm"
+      [class.disabled]="!productForm.valid"
+    ></button
+    ><!--primeNG button with pButton decorator with icons-->
+    <button
+      type="button"
+      pButton
+      icon="pi pi-times"
+      (click)="onCancel()"
+      label="Cancel"
+    ></button>
+  </p-footer>
+</p-dialog>
